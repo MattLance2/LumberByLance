@@ -1,0 +1,183 @@
+
+body {	
+	margin: 0;
+	padding: 0;
+    font-family: Arial Unicode MS;
+}
+
+#clear {
+    clear: both;
+}
+
+#leftWood {
+    float: left;
+    background:url('images/pressuretreatedlumber.jpg') top left no-repeat;
+    width: 300px;
+    height: 193px;
+    position: absolute;
+    top: 550px;
+    z-index: -1;
+}
+
+#content{
+	margin: 0 auto;
+	padding: 0;
+	width: 700px;
+	text-align: left;
+	border-left: 1px solid #FE6700;
+	border-bottom: 1px solid #FE6700;
+	border-right: 2px solid #FE6700;
+}
+
+#header {
+	padding: 20px 20px 0px 20px;
+}
+
+#footer {
+	margin: 0 auto;
+    text-align: center;
+	padding: 0;
+}
+
+#orangeHeaderText {
+	color: #FE6700;
+    font-family: Arial Rounded MT Bold;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+table#headerInfo {
+    width: 100%;
+    padding-right: 60px;
+}
+
+#headerLeftText {
+    font-family: Stencil;
+    font-size: 18px;
+    width: 50%;
+}
+
+#headerRightText {
+    font-size: 20px;
+    text-align: right;
+}
+
+#siteNav {
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    background:url('images/navBackground.PNG') 0 0 no-repeat;
+}
+
+#topOrange{
+    color: white;
+    font-family: Stencil;
+}
+
+table#navOptions {
+    padding-top:20px;
+}
+
+table#navOptions td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+table#navOptions a , table#navOptions a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+table#navOptions a:hover {
+    color: black;
+}
+
+.center {
+    text-align: center;
+}
+
+#pageText {
+    padding: 10px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    background:url('images/sawmill.JPG') 100% 100% no-repeat;
+    background-color: white;
+}
+
+.pageTextHeader {
+    text-align:center;
+    color: #FE6700;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#mainTopText {
+    padding: 10px;
+}
+
+table#supportForm {
+	width: 100%;
+}
+
+table#supportForm  td.leftSide{
+	width: 30%;
+	text-align: right;
+}
+
+#supportSend {
+	width: 100%;
+	text-align: center;
+}
+
+img.pageImg {
+    width: 300px;
+    height: 150px;
+}
+
+img.galleryCopyImg {
+    width: 131px;
+    height: 87px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+}
+
+img#dryKilnImg {
+    width: 300px;
+    height: 225px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+img#RecycleTreePile{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    border: 1px solid #FE6700;
+}
+
+img#RecycleTreePile tr{
+    width: 50%;
+}
+
+table#RecycleMain{
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+}
+
+table#RecyclePrices{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    border: 1px solid #FE6700;
+    padding: 10px;
+}
+
+td#RecycleAccepting {
+    padding-left: 30px;
+    Font-size: 24px;
+    text-align: left;
+}
