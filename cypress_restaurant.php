@@ -3,6 +3,12 @@ include_once('page_setup.php');
 $header = printHeader();
 echo $header;
 
+$sideWallPicLink = setupLink("rest/Side_Wall.jpg");
+$firePlacePicLink = setupLink("rest/Fire_Place.jpg");
+$firePlaceMountPicLink = setupLink("rest/Fire_Place_Mount.jpg");
+$floorPicLink = setupLink("rest/The_Beautiful_Floors.jpg");
+$stairCasePicLink = setupLink("rest/Stair_Case.jpg");
+
 $pageContent = <<<HTML
     <section id="main">
         <div class="container">
@@ -13,7 +19,7 @@ $pageContent = <<<HTML
         <div id="container">
             <article class="centerInfo">
                 <div class="centerInfoText">
-                    <a href="img/rest/Side_Wall.jpg">
+                    <a {$sideWallPicLink}>
                         <img src='img/rest/Side_Wallcopy.jpg' class='galleryCopyImg' />
                     </a>
                 </div>
@@ -25,10 +31,10 @@ $pageContent = <<<HTML
         <div id="container">
             <article class="centerInfo">
                 <div class="centerInfoText">
-                    <a href="img/rest/Fire_Place.jpg">
+                    <a {$firePlacePicLink}>
                         <img src='img/rest/Fire_Placecopy.jpg' class='galleryCopyImg' />
                     </a>
-                    <a href="img/rest/Fire_Place_Mount.jpg">
+                    <a {$firePlaceMountPicLink}>
                         <img src='img/rest/Fire_Place_Mountcopy.jpg' class='galleryCopyImg' />
                     </a>
                 </div>
@@ -40,10 +46,10 @@ $pageContent = <<<HTML
         <div id="container">
             <article class="centerInfo">
                 <div class="centerInfoText">
-                    <a href="img/rest/The_Beautiful_Floors.jpg">
+                    <a {$floorPicLink}>
                         <img src='img/rest/The_Beautiful_Floorscopy.jpg' class='galleryCopyImg' />
                     </a>
-                    <a href="img/rest/Stair_Case.jpg">
+                    <a {$stairCasePicLink}>
                         <img src='img/rest/Stair_Casecopy.jpg' class='galleryCopyImg' />
                     </a>
                 </div>
@@ -65,4 +71,8 @@ echo $pageContent;
 
 $footer = printFooter();
 echo $footer;
+
+function setupLink($picLink){
+    return 'href="pic.php?heading=Cypress Restaurant&imgPath=img/' . $picLink . '"';
+}
 ?>

@@ -214,6 +214,13 @@ img.galleryCopyImg {
     border: none;
 }
 
+
+/* Picture page */
+img.picPageImg {
+    width: 100%;
+}
+
+
 /* Footer */
 footer {
     padding: 20px;

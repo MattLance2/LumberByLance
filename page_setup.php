@@ -35,24 +35,47 @@ HTML;
 }
 
 function printNavigation(){
-    return <<<HTML
+    
+    $phpPageName = getPageName();
+    
+    $indexCurrent = ($phpPageName == 'index.php') ? " class='current'" : "";
+    $sawmillCurrent = ($phpPageName == 'sawmill.php') ? " class='current'" : "";
+    $prepCurrent = ($phpPageName == 'preparation.php') ? " class='current'" : "";
+    $kilnCurrent = ($phpPageName == 'kiln.php') ? " class='current'" : "";
+    $contactCurrent = ($phpPageName == 'contact.php') ? " class='current'" : "";
+    
+    $galleryCurrent = pageIsGallery($phpPageName) ? " class='current'" : "";
+
+    return "
     <header>
-        <div class="container">
-            <div id="branding">
+        <div class='container'>
+            <div id='branding'>
                 <h1>Lumber By Lance</h1>
             </div>
             <nav>
                 <ul>
-                    <li class="current"><a href='index.php'>HOME</a></li>
-                    <li><a href='sawmill.php'>SAWMILL</a></li>
-                    <li><a href='preparation.php'>PREPARATION</a></li>
-                    <li><a href='kiln.php'>KILN</a></li>
-                    <li><a href='gallery.php'>GALLERY</a></li>
-                    <li><a href='contact.php'>CONTACT</a></li>
+                    <li{$indexCurrent}><a href='index.php'>HOME</a></li>
+                    <li{$sawmillCurrent}><a href='sawmill.php'>SAWMILL</a></li>
+                    <li{$prepCurrent}><a href='preparation.php'>PREPARATION</a></li>
+                    <li{$kilnCurrent}><a href='kiln.php'>KILN</a></li>
+                    <li{$galleryCurrent}><a href='gallery.php'>GALLERY</a></li>
+                    <li{$contactCurrent}><a href='contact.php'>CONTACT</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-HTML;
+";
+}
+
+function getPageName(){
+    $pageName = basename($_SERVER['PHP_SELF']);
+    return $pageName;
+}
+
+function pageIsGallery($pageNameInput){
+    $galleryPageList = array("gallery.php", "pecan_porch.php", "cypress_restaurant.php", "pic.php");
+    if (in_array($pageNameInput, $galleryPageList))
+        return true;
+    return false;
 }
 ?>
